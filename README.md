@@ -11,4 +11,6 @@ Various (python) scripts
 
 - mover.py - organizes all files in the current directory into subfolders named by their starting character
 
-- rename.py - scans files (with given extension) in current directory, detect non-ascii names and rename them 
+- rename.py - scans files (with given extension) in current directory, detect non-ascii names and rename them
+
+- renamer.py - scans files (with hardcoded extension) in current directory, detect specific names and rename them
