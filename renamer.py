@@ -1,7 +1,7 @@
 import os
+import sys
 
 base = " abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890()[]!_"
-extension = ".smc"
 
 def normalize_filename(filename, base):
     name, ext = os.path.splitext(filename)
@@ -27,5 +27,12 @@ def rename_files_in_directory(base, extension):
                 os.rename(os.path.join(current_dir, filename),
                           os.path.join(current_dir, unique_name))
                 print(f"Name change: {filename} → {unique_name}")
-            
-rename_files_in_directory(base, extension)
+
+if __name__ == "__main__":
+    if len(sys.argv) < 2:
+        print("Please provide a file extension (without the dot) as a script argument.")
+        print("Example: python renamer.py smc")
+        sys.exit(1)
+
+    extension = "." + sys.argv[1]
+    rename_files_in_directory(base, extension)
