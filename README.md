@@ -13,4 +13,4 @@ Various (python) scripts
 
 - rename.py - scans files (with given extension) in current directory, detect non-ascii names and rename them
 
-- renamer.py - scans files (with hardcoded extension) in current directory, detect specific names and rename them
+- renamer.py - renames and sanitizes filenames with a given extension in the current directory (uses hardcoded list of valid characters)
